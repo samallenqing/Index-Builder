@@ -4,15 +4,19 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.Properties;
 
 public class feeder {
     private final static String QUEUE_NAME = "q_feeds";
 
     public static void main(String[] args) throws Exception {
-        String rawQueryDataFilePath = "rawQuery.txt";
+
+        Properties properties = new Properties();
+        InputStream inputStream = new FileInputStream("config.properties");
+        properties.load(inputStream);
+        String rawQueryDataFilePath = properties.getProperty("rawQueryDataFilePath");
+        inputStream.close();
         try (BufferedReader br = new BufferedReader(new FileReader(rawQueryDataFilePath))) {
 
             String line;
