@@ -12,7 +12,7 @@ public class feeder {
     private final static String QUEUE_NAME = "q_feeds";
 
     public static void main(String[] args) throws Exception {
-        String rawQueryDataFilePath = args[0];
+        String rawQueryDataFilePath = "rawQuery.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(rawQueryDataFilePath))) {
 
             String line;
