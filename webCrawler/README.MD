@@ -13,6 +13,8 @@ This is an application to build reverse and forward Ads index.
 For test purpose, rawQuery.txt file only contains two queries or the running time will be very long. If you want to try
 the full procedure, update the 'adsDataFilePath' to 'fullQuery.txt' in config.properties file.
 
+I personally update the password for MySQL root user account to '1', if your MySQL root password is not 1, update to your
+root password in the config.properties 'mysqlPass' field.
 
 #### OR APPLICATION WILL FAIL TO CREATE TABLE!!!
 
