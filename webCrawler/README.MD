@@ -14,7 +14,7 @@ For test purpose, rawQuery.txt file only contains two queries or the running tim
 the full procedure, update the 'adsDataFilePath' to 'fullQuery.txt' in config.properties file.
 
 
-####OR APPLICATION WILL FAIL TO CREATE TABLE!!!
+#### OR APPLICATION WILL FAIL TO CREATE TABLE!!!
 
 ## Step 1 - Create a directory folder and download files from github
 
